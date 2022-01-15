@@ -30,6 +30,12 @@ let invoices = [
       due: "01/27/2998"
     }
   ];
+
+  export function deleteInvoice(number) {
+    invoices = invoices.filter(
+      invoice => invoice.number !== number
+    );
+  }
   
   export function getInvoices() {
     return invoices;
